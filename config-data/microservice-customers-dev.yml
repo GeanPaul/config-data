@@ -14,7 +14,8 @@
 customers:
   property: Customers Profile Dev
 server:
-  port: 8082
+  port: ${PORT:${SERVER_PORT:0}}
+#8082
 
 spring:
   application:
@@ -30,5 +31,5 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://localhost:8085/eureka
-    instance:
-      hostname: localhost
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
