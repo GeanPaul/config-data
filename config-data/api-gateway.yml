@@ -1,0 +1,22 @@
+server:
+  port: 8080
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8085/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: microservice-credits-dev
+          uri: lb://microservice-credits
+          predicates:
+           - Path=/credits/**
