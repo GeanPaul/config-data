@@ -16,7 +16,7 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: microservice-credits
-          uri: lb://microservice-credits
+        - id: microservice-customers
+          uri: lb://microservice-customers
           predicates:
-            - Path=/credits/**
+            - Path=/personal-customers/**
