@@ -1,20 +1,25 @@
 server:
-  port: 8080
+  port: 8090
 eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
   client:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8085/eureka
-  instance:
-    hostname: localhost
+      defaultZone: http://${eureka.instance.hostname}:8085/eureka/
+
 
 spring:
   cloud:
+    discovery:
+      enable: true
     gateway:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
       routes:
         - id: microservice-credits
           uri: lb://microservice-credits
