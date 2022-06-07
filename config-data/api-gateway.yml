@@ -24,7 +24,3 @@ spring:
           uri: lb://microservice-credits
           predicates:
             - Path=/credits/**
-        - id: microservice-customers
-            uri: lb://microservice-customers
-            predicates:
-              - Path=/personal-customers/**,/business-customers/**
