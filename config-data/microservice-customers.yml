@@ -14,7 +14,8 @@
 customers:
   property: Customers Profile Dev
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8082
+  #${PORT:${SERVER_PORT:0}}
 #8082
 
 spring:
