@@ -28,7 +28,4 @@ spring:
             uri: lb://microservice-customers
             predicates:
               - Path=/personal-customers/**,/business-customers/**
-        - id: microservice-accounts
-            uri: lb://microservice-accounts
-            predicates:
-              - Path=/savings-accounts/**,/fixedterm-accounts/**,/current-accounts/**
+        
