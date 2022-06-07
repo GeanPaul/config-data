@@ -12,7 +12,8 @@
 account:
   property: Credits Profile Dev
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8083
+  #${PORT:${SERVER_PORT:0}}
 #8083
 
 spring:
