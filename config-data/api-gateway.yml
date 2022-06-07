@@ -28,4 +28,3 @@ spring:
             uri: lb://microservice-customers
             predicates:
               - Path=/personal-customers/**,/business-customers/**
-        
